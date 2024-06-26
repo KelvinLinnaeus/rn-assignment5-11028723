@@ -2,17 +2,23 @@
 
 ## Description
 
-This application is designed to help users manage their bank accounts efficiently. The app includes features such as transactions, viewing account details, and viewing transactions. It also allows users to switch between light and dark themes to enhance the user experience.
+This application is designed to help users manage their bank accounts efficiently. The app includes features such as transactions, viewing credit/debit cards , and managing account. It also allows users to switch between light and dark themes to enhance the user experience.
 ### Components
 
 
 #### `HomeScreen`
-- Displays user information and bank card and recent transactions.
+- Displays user information, most used bank card and recent transactions.
 - Contains sections to send, recieve, loan and Topup Account.
+
+#### `My Cards`
+- Displays All Bank Cards
+
+#### `Statistics`
+- Displays all recent transactions, total amount avialable and expenses
 
 
 #### `Settings`
-- Contains sections to change language, Edit Profile, Contact Us, Change Password and View Privacy Policy.
+- Contains sections to change language, edit profile, access contact information, change password and view privacy policy.
 - Change App theme
 
 ## Student ID
