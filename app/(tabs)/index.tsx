@@ -10,7 +10,9 @@ export default function TabOneScreen() {
           Appearance.setColorScheme("light");
         }}
       >
-        <Text style={styles.title}>Tab One</Text>
+        <Text style={styles.title} className="text-red-800">
+          Tab One
+        </Text>
       </TouchableOpacity>
       <View
         style={styles.separator}
