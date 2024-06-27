@@ -1,4 +1,4 @@
-import { Image, ImageSourcePropType } from "react-native";
+import { Image, ImageSourcePropType, TouchableOpacity } from "react-native";
 import { Text, View } from "@/components/Themed";
 
 import React from "react";
@@ -17,7 +17,7 @@ const Transaction: React.FC<TransactionProps> = ({
   purpose,
 }) => {
   return (
-    <View className="flex-row space-x-4 items-center py-2">
+    <TouchableOpacity className="flex-row space-x-4 items-center py-2">
       <View className="w-14 h-14 bg-slate-200 rounded-full items-center justify-center">
         <Image className="scale-110" source={imageUrl} />
       </View>
@@ -30,7 +30,7 @@ const Transaction: React.FC<TransactionProps> = ({
           <Text className="font-bold text-base">{amount} </Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

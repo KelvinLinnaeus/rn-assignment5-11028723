@@ -1,33 +1,53 @@
-import { StyleSheet } from "react-native";
+import { Appearance, StyleSheet, Switch } from "react-native";
 
 import { Text, View } from "@/components/Themed";
+import Container from "@/components/Container";
+import SettingsCard from "@/components/SettingsCard";
+import { useState } from "react";
 
 export default function Settings() {
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  const toggleSwitch = () => {
+    setIsEnabled((previousState) => !previousState);
+    if (isEnabled) {
+      Appearance.setColorScheme("light");
+    } else {
+      Appearance.setColorScheme("dark");
+    }
+  };
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-    </View>
+    <Container>
+      <Text className="text-center text-xl font-bold mt-8">Settings</Text>
+
+      <View className="flex space-y-4 mt-20">
+        <View>
+          <SettingsCard setting="Language" />
+        </View>
+        <View>
+          <SettingsCard setting="My Profile" />
+        </View>
+        <View>
+          <SettingsCard setting="Contact Us" />
+        </View>
+        <View>
+          <SettingsCard setting="Change Password" />
+        </View>
+        <View>
+          <SettingsCard setting="Privacy Policy" />
+        </View>
+      </View>
+
+      <View className="flex-row justify-between mt-20">
+        <Text className="flex-1 text-lg">Theme</Text>
+        <View className="">
+          <Switch
+            trackColor={{ false: "#767577", true: "green" }}
+            onValueChange={toggleSwitch}
+            value={isEnabled}
+          />
+        </View>
+      </View>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
-});

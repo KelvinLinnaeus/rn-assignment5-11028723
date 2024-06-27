@@ -7,7 +7,7 @@ interface ContainerProps {
 }
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
-  return <SafeAreaView className="pt-5 px-5">{children}</SafeAreaView>;
+  return <SafeAreaView className="pt-5 px-5 h-full">{children}</SafeAreaView>;
 };
 
 export default Container;
