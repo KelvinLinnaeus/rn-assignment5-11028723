@@ -9,6 +9,7 @@ interface TransactionProps {
   reference: string;
   amount: string;
   purpose: string;
+  isBlue?: boolean;
 }
 
 const Transaction: React.FC<TransactionProps> = ({
@@ -16,6 +17,7 @@ const Transaction: React.FC<TransactionProps> = ({
   reference,
   imageUrl,
   purpose,
+  isBlue,
 }) => {
   return (
     <TouchableOpacity className="flex-row space-x-4 items-center py-2">
@@ -28,7 +30,9 @@ const Transaction: React.FC<TransactionProps> = ({
           <Text className="text-slate-600">{purpose} </Text>
         </View>
         <View>
-          <Text className="font-bold text-base">{amount} </Text>
+          <Text className={`font-bold text-base ${isBlue && "text-blue-600"}`}>
+            {amount}
+          </Text>
         </View>
       </View>
     </TouchableOpacity>

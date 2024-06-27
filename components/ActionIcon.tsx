@@ -12,7 +12,7 @@ export default function ActionIcon({
 }) {
   return (
     <TouchableOpacity className="items-center ">
-      <View className="bg-slate-200 w-14 justify-center h-14 rounded-full items-center">
+      <View className="bg-slate-200 w-14 justify-center h-14 rounded-full items-center mb-2">
         <Image className=" " source={imageUrl} />
       </View>
       <Text>{text}</Text>

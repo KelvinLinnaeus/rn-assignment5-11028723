@@ -10,11 +10,15 @@ import { Text, View } from "@/components/Themed";
 import Container from "@/components/Container";
 import ActionIcon from "@/components/ActionIcon";
 import Transaction from "@/components/Transaction";
+import { AntDesign } from "@expo/vector-icons";
 
 export default function Home() {
   return (
     <Container>
-      <ScrollView className="space-y-4 h-full">
+      <ScrollView
+        className="space-y-4 h-full"
+        showsVerticalScrollIndicator={false}
+      >
         <View className="flex-row items-center h-16 ">
           <View className="flex-row space-x-4 flex-1">
             <View className=" relative h-16 w-16">
@@ -31,11 +35,7 @@ export default function Home() {
           </View>
 
           <View className=" rounded-full  bg-slate-200  flex-row justify-center items-center h-14 w-14">
-            <Image
-              className="h-1/2 w-1/2"
-              resizeMode="contain"
-              source={require("@/assets/images/search.png")}
-            />
+            <AntDesign name="search1" size={24} color="black" />
           </View>
         </View>
 
@@ -69,7 +69,7 @@ export default function Home() {
         <View>
           <View className="flex-row justify-between mb-2">
             <Text className="text-lg">Transaction</Text>
-            <Text className="text-lg">See All</Text>
+            <Text className="text-lg text-blue-600">See All</Text>
           </View>
           <View className="space-y-3">
             <View>
@@ -90,6 +90,7 @@ export default function Home() {
             </View>
             <View>
               <Transaction
+                isBlue={true}
                 imageUrl={require("../../assets/images/moneyTransfer.png")}
                 reference="Money Transfer"
                 purpose="Transaction"
