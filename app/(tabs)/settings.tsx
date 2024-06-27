@@ -3,19 +3,26 @@ import { Appearance, StyleSheet, Switch } from "react-native";
 import { Text, View } from "@/components/Themed";
 import Container from "@/components/Container";
 import SettingsCard from "@/components/SettingsCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Settings() {
   const [isEnabled, setIsEnabled] = useState(false);
+  const [theme, setTheme] = useState(Appearance.getColorScheme());
 
   const toggleSwitch = () => {
     setIsEnabled((previousState) => !previousState);
+
     if (isEnabled) {
-      Appearance.setColorScheme("light");
+      setTheme("dark");
     } else {
-      Appearance.setColorScheme("dark");
+      setTheme("light");
     }
+    Appearance.setColorScheme(theme);
   };
+
+  useEffect(() => {
+    Appearance.setColorScheme(theme);
+  }, [theme]);
   return (
     <Container>
       <Text className="text-center text-xl font-bold mt-8">Settings</Text>

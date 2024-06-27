@@ -1,8 +1,14 @@
-import { ScrollView, FlatList, TouchableOpacity } from "react-native";
+import {
+  ScrollView,
+  FlatList,
+  TouchableOpacity,
+  Text,
+  View,
+} from "react-native";
 import React from "react";
 import Container from "@/components/Container";
 import StatisticsCard from "@/components/StatisticsCard";
-import { Text, View } from "@/components/Themed";
+import { Text as ThemeText } from "@/components/Themed";
 
 export default function Statistics() {
   const banks = [
@@ -40,7 +46,9 @@ export default function Statistics() {
   return (
     <Container>
       <View>
-        <Text className="text-center text-xl font-bold my-8">Statistics</Text>
+        <ThemeText className="text-center text-xl font-bold my-8">
+          Statistics
+        </ThemeText>
 
         <View className="space-y-3 ">
           <View>
@@ -75,10 +83,10 @@ export default function Statistics() {
             />
           </View>
         </View>
-        <Text className="text-center text-xl font-bold my-8">
+        <ThemeText className="text-center text-xl font-bold my-8">
           Most Used Accounts
-        </Text>
-        <View className="pb-10">
+        </ThemeText>
+        <View className="pb-10 ">
           <FlatList
             showsVerticalScrollIndicator={false}
             data={banks}
