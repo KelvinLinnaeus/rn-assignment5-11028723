@@ -21,28 +21,28 @@ export default function Home() {
       >
         <View className="flex-row items-center h-16 ">
           <View className="flex-row space-x-4 flex-1">
-            <View className=" relative h-16 w-16">
+            <View className=" relative h-14 w-14">
               <Image
                 className="h-full w-full"
                 resizeMode="contain"
                 source={require("@/assets/images/profile.png")}
               />
             </View>
-            <View>
-              <Text className="text-slate-600">Welcome back</Text>
-              <Text className="text-xl">Kelvin Mhacwilson</Text>
+            <View className="justify-center space-y-1">
+              <Text className="text-slate-600">Welcome back, </Text>
+              <Text className="text-2xl">Kelvin Mhacwilson</Text>
             </View>
           </View>
 
-          <View className=" rounded-full  bg-slate-200  flex-row justify-center items-center h-14 w-14">
-            <AntDesign name="search1" size={24} color="black" />
+          <View className=" rounded-full  bg-slate-200  flex-row justify-center items-center h-10 w-10">
+            <AntDesign name="search1" size={20} color="black" />
           </View>
         </View>
 
         <View className="py-2 w-full h-[230px] items-center ">
           <Image
             className="h-full w-full"
-            resizeMode="cover"
+            resizeMode="contain"
             source={require("@/assets/images/Card.png")}
           />
         </View>

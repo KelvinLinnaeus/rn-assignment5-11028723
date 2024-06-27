@@ -1,6 +1,7 @@
-import { View, Text, Image, ScrollView } from "react-native";
+import { Image, ScrollView } from "react-native";
 import React from "react";
 import Container from "@/components/Container";
+import { Text, View } from "@/components/Themed";
 
 export default function MyCards() {
   return (
@@ -11,21 +12,21 @@ export default function MyCards() {
         <View className="py-2 w-full h-[230px] items-center mb-4">
           <Image
             className="h-full w-full"
-            resizeMode="cover"
+            resizeMode="contain"
             source={require("@/assets/images/Card.png")}
           />
         </View>
         <View className="py-2 w-full h-[230px] items-center mb-4">
           <Image
             className="h-full w-full"
-            resizeMode="cover"
+            resizeMode="contain"
             source={require("@/assets/images/Card.png")}
           />
         </View>
         <View className="py-2 w-full h-[230px] items-center mb-4">
           <Image
             className="h-full w-full"
-            resizeMode="cover"
+            resizeMode="contain"
             source={require("@/assets/images/Card.png")}
           />
         </View>
