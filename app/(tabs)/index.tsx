@@ -67,35 +67,43 @@ export default function Home() {
         </View>
 
         <View>
-          <View className="flex-row justify-between ">
+          <View className="flex-row justify-between mb-2">
             <Text className="text-lg">Transaction</Text>
             <Text className="text-lg">See All</Text>
           </View>
-          <View className="">
-            <Transaction
-              imageUrl={require("../../assets/images/apple.png")}
-              reference="Apple Store"
-              purpose="Entertainment"
-              amount="- $5.99"
-            />
-            <Transaction
-              imageUrl={require("../../assets/images/spotify.png")}
-              reference="Spotify"
-              purpose="Music"
-              amount="- $12.99"
-            />
-            <Transaction
-              imageUrl={require("../../assets/images/moneyTransfer.png")}
-              reference="Money Transfer"
-              purpose="Transaction"
-              amount="$300"
-            />
-            <Transaction
-              imageUrl={require("../../assets/images/grocery.png")}
-              reference="Grocery"
-              purpose="Transaction"
-              amount="- $88"
-            />
+          <View className="space-y-3">
+            <View>
+              <Transaction
+                imageUrl={require("../../assets/images/apple.png")}
+                reference="Apple Store"
+                purpose="Entertainment"
+                amount="- $5.99"
+              />
+            </View>
+            <View>
+              <Transaction
+                imageUrl={require("../../assets/images/spotify.png")}
+                reference="Spotify"
+                purpose="Music"
+                amount="- $12.99"
+              />
+            </View>
+            <View>
+              <Transaction
+                imageUrl={require("../../assets/images/moneyTransfer.png")}
+                reference="Money Transfer"
+                purpose="Transaction"
+                amount="$300"
+              />
+            </View>
+            <View>
+              <Transaction
+                imageUrl={require("../../assets/images/grocery.png")}
+                reference="Grocery"
+                purpose="Transaction"
+                amount="- $88"
+              />
+            </View>
           </View>
         </View>
       </ScrollView>

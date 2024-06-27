@@ -1,5 +1,6 @@
 import { Image, ImageSourcePropType, TouchableOpacity } from "react-native";
 import { Text, View } from "@/components/Themed";
+import { appTheme } from "@/utils/theme";
 
 import React from "react";
 

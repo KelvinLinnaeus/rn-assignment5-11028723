@@ -1,6 +1,7 @@
 import { Text, View } from "@/components/Themed";
 import React from "react";
 import { Image, ImageSourcePropType, TouchableOpacity } from "react-native";
+import { appTheme } from "@/utils/theme";
 
 export default function ActionIcon({
   imageUrl,

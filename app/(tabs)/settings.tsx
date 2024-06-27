@@ -40,11 +40,12 @@ export default function Settings() {
 
       <View className="flex-row justify-between mt-20">
         <Text className="flex-1 text-lg">Theme</Text>
-        <View className="">
+        <View className="w-20 items-end ">
           <Switch
             trackColor={{ false: "#767577", true: "green" }}
             onValueChange={toggleSwitch}
             value={isEnabled}
+            style={{ transform: [{ scaleX: 1.3 }, { scaleY: 1.3 }] }}
           />
         </View>
       </View>
